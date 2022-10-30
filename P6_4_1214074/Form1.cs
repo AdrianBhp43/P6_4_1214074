@@ -111,7 +111,7 @@ namespace P6_4_1214074
             }
             else
             {
-                if ((tbName.Text).All(Char.IsNumber))
+                if ((tbGunung1.Text).All(Char.IsNumber))
                 {
                     epWarning.SetError(tbGunung1, "");
                     epWrong.SetError(tbGunung1, "");
@@ -139,7 +139,7 @@ namespace P6_4_1214074
             int Gunung2 = int.Parse(tbGunung2.Text);
 
 
-            if (tbGunung1.Text == "")
+            if (tbGunung2.Text == "")
             {
                 epWarning.SetError(tbGunung2, "Textbox Gunung tidak boleh kosong!");
                 epWrong.SetError(tbGunung2, "");
@@ -147,7 +147,7 @@ namespace P6_4_1214074
             }
             else
             {
-                if ((tbName.Text).All(Char.IsNumber))
+                if ((tbGunung2.Text).All(Char.IsNumber))
                 {
                     epCorrect.SetError(tbGunung2, "Betul!");
                     epWarning.SetError(tbGunung2, "");
@@ -156,9 +156,10 @@ namespace P6_4_1214074
                 else
                 {
                     epCorrect.SetError(tbGunung2, "");
-                    epWarning.SetError(tbGunung2, "");
                     epWrong.SetError(tbGunung2, "Inputan hanya boleh Angka!");
+                    epWarning.SetError(tbGunung2, "");
                 }
+
             }
 
             if (Gunung1 > Gunung2)
