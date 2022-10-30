@@ -23,7 +23,7 @@ namespace P6_4_1214074
         {
             if (tbName.Text == "")
             {
-                epWarning.SetError(tbName, "Textbox Huruf tidak boleh kosong!");
+                epWarning.SetError(tbName, "Textbox Nama tidak boleh kosong!");
                 epWrong.SetError(tbName, "");
                 epCorrect.SetError(tbName, "");
             }
@@ -48,7 +48,7 @@ namespace P6_4_1214074
         {
             if (tbUmur.Text == "")
             {
-                epWarning.SetError(tbUmur, "Textbox Angka tidak boleh kosong!");
+                epWarning.SetError(tbUmur, "Textbox Umur tidak boleh kosong!");
                 epWrong.SetError(tbUmur, "");
                 epCorrect.SetError(tbUmur, "");
             }
@@ -56,7 +56,7 @@ namespace P6_4_1214074
             {
                 if (tbUmur.Text == "")
                 {
-                    epWarning.SetError(tbUmur, "Textbox Angka tidak boleh kosong!");
+                    epWarning.SetError(tbUmur, "Textbox Umur tidak boleh kosong!");
                     epWrong.SetError(tbUmur, "");
                     epCorrect.SetError(tbUmur, "");
                 }
@@ -105,7 +105,7 @@ namespace P6_4_1214074
         {
             if (tbGunung1.Text == "")
             {
-                epWarning.SetError(tbGunung1, "Textbox Angka tidak boleh kosong!");
+                epWarning.SetError(tbGunung1, "Textbox Gunung tidak boleh kosong!");
                 epWrong.SetError(tbGunung1, "");
                 epCorrect.SetError(tbGunung1, "");
             }
@@ -235,64 +235,11 @@ namespace P6_4_1214074
             }
         }
 
-        private void btnTampil_Click(object sender, EventArgs e)
-        {
-            if (tbName.Text == "")
-            {
-                MessageBox.Show("Masukkan nama anda", "Warning!",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (tbUmur.Text == "")
-            {
-                MessageBox.Show("Masukkan jenis kelamin anda", "Warning!",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (tbEmail.Text == "")
-            {
-                MessageBox.Show("Harus memilih salah satu dari pilihan course", "Warning!",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (tbGunung1.Text == "")
-            {
-                MessageBox.Show("Harus memilih salah satu dari pilihan Date", "Warning!",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (tbGunung2.Text == "")
-            {
-                MessageBox.Show("Harus memilih salah satu dari pilihan Date", "Warning!",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (tbDomisili.Text == "")
-            {
-                MessageBox.Show("Harus memilih salah satu dari pilihan Date", "Warning!",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (tbPekerjaan.Text == "")
-            {
-                MessageBox.Show("Harus memilih salah satu dari pilihan Date", "Warning!",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                MessageBox.Show
-                ("Nama : " + tbName.Text +
-                "\nUmur : " + tbUmur.Text +
-                "\nEmail : " + tbEmail.Text +
-                "\nGunung 1 : " + tbGunung1.Text +
-                "\nGunung 2 : " + tbGunung2.Text +
-                "\nDomisili : " + tbDomisili.Text +
-                "\nPekerjaan : " + tbPekerjaan.Text +
-                "\Skill : " + tbSkill.Text,
-                "Registration Form",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
         private void tbSkill_Leave(object sender, EventArgs e)
         {
             if (tbSkill.Text == "")
             {
-                epWarning.SetError(tbSkill, "Textbox Huruf tidak boleh kosong!");
+                epWarning.SetError(tbSkill, "Textbox Skill tidak boleh kosong!");
                 epWrong.SetError(tbSkill, "");
                 epCorrect.SetError(tbSkill, "");
             }
@@ -306,10 +253,63 @@ namespace P6_4_1214074
                 }
                 else
                 {
-                    epWrong.SetError(tbSkill, "Inputan tidak boleh lebih dari 8!");
+                    epWrong.SetError(tbSkill, "Inputan tidak boleh lebih dari 6!");
                     epWarning.SetError(tbSkill, "");
                     epCorrect.SetError(tbSkill, "");
                 }
+            }
+        }
+
+        private void btnTampil_Click(object sender, EventArgs e)
+        {
+            if (tbName.Text == "")
+            {
+                MessageBox.Show("Masukkan nama anda", "Warning!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (tbUmur.Text == "")
+            {
+                MessageBox.Show("Masukkan umur anda", "Warning!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (tbEmail.Text == "")
+            {
+                MessageBox.Show("Harus email anda", "Warning!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (tbGunung1.Text == "")
+            {
+                MessageBox.Show("Harus memasukan gunung yang pernah didaki", "Warning!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (tbGunung2.Text == "")
+            {
+                MessageBox.Show("Harus memasukan gunung yang pernah didaki", "Warning!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (tbDomisili.Text == "")
+            {
+                MessageBox.Show("Harus memasukan Domisili", "Warning!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (tbPekerjaan.Text == "")
+            {
+                MessageBox.Show("Harus memasukan pekerjaan", "Warning!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                MessageBox.Show
+                ("Nama : " + tbName.Text +
+                "\nUmur : " + tbUmur.Text +
+                "\nEmail : " + tbEmail.Text +
+                "\nGunung 1 : " + tbGunung1.Text +
+                "\nGunung 2 : " + tbGunung2.Text +
+                "\nDomisili : " + tbDomisili.Text +
+                "\nPekerjaan : " + tbPekerjaan.Text +
+                "\nSkill : " + tbSkill.Text,
+                "Registration Form",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
