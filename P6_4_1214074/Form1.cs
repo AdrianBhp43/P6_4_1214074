@@ -308,7 +308,7 @@ namespace P6_4_1214074
                 "\nDomisili : " + tbDomisili.Text +
                 "\nPekerjaan : " + tbPekerjaan.Text +
                 "\nSkill : " + tbSkill.Text,
-                "Registration Form",
+                "Kursus Mendaki Alpine",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
